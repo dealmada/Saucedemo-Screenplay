@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.saucedemo'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+    maven { url 'https://repo.maven.apache.org/maven2' }
+    maven { url 'https://dl.bintray.com/serenity-bdd/serenity' }
+}
+
+ext {
+    serenityVersion = '3.3.10'
+    junitVersion = '4.13.2'
+    cucumberVersion = '7.14.0'
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:$serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-screenplay:$serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:$serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-cucumber:$serenityVersion"
+    testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
+    testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.10.0'
+    testImplementation "junit:junit:$junitVersion"
+    // WebDriverManager para manejar el driver automáticamente
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
+}
+
+test {
+    useJUnit()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+task serenityReport(type: Exec) {
+    commandLine 'java', '-jar', 'target/serenity-bdd.jar', 'aggregate'
+}

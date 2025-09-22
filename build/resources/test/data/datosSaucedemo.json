@@ -1,0 +1,13 @@
+{
+  "usuario": "standard_user",
+  "contrasena": "secret_sauce",
+  "productos": [
+    "Sauce Labs Backpack",
+    "Sauce Labs Bolt T-Shirt"
+  ],
+  "formulario": {
+    "nombre": "Cindy",
+    "apellido": "De Almada",
+    "codigoPostal": "17102"
+  }
+}

@@ -1,0 +1,7 @@
+Tuve que revisar bastante información para guiarme ya que a veces se generaban errores que desconocía
+Tuve problemas con la ejecución por mi Chrome y el chromedriver que eran incompatibles, y al tratar de solucionarlo se generaban más errores,
+al final tuve que trabajar desde otra máquina que me permitió ejecutar el proyecto y ver los errores de mi código.
+Con esto tuve que hacer mejoras en el código para que funcione de forma correcta.
+Como se pedía en el ejercicio, utilicé en mi caso un archivo json para que lea la data de ingreso, de la compra y el formulario.
+
+Aprendí bastante pero aún me falta por conocer y manejar las herramientas.
