@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Proceso de compra en SauceDemo" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-22T17:00:02" hostname="UIOLOGICSTUDI32" time="11.385">
+<testsuite name="Proceso de compra en SauceDemo" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-09-24T22:19:54" hostname="UIOLOGICSTUDI32" time="30.442">
   <properties/>
-  <testcase name="Realizar compra con éxito" classname="Proceso de compra en SauceDemo" time="11.385"/>
-  <system-out><![CDATA[C:\Users\cindy.almada\.cache\selenium\chromedriver\win64\140.0.7339.185\chromedriver.exe
+  <testcase name="Realizar compra con éxito #1" classname="Proceso de compra en SauceDemo" time="17.745"/>
+  <testcase name="Realizar compra con éxito #2" classname="Proceso de compra en SauceDemo" time="12.697"/>
+  <system-out><![CDATA[C:\Users\cindy.almada\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+C:\Users\cindy.almada\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
 ]]></system-out>
-  <system-err><![CDATA[sep 22, 2025 12:00:02 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+  <system-err><![CDATA[sep 24, 2025 5:19:55 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
 INFORMACIÓN: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
-sep 22, 2025 12:00:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+sep 24, 2025 5:19:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find CDP implementation matching 140
-sep 22, 2025 12:00:06 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+sep 24, 2025 5:19:58 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+sep 24, 2025 5:20:11 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFORMACIÓN: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+sep 24, 2025 5:20:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTENCIA: Unable to find CDP implementation matching 140
+sep 24, 2025 5:20:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

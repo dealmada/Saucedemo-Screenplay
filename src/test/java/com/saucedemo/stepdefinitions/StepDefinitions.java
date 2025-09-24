@@ -6,8 +6,8 @@ import com.saucedemo.tasks.Formulario;
 import com.saucedemo.tasks.Login;
 import com.saucedemo.tasks.VerCarrito;
 import com.saucedemo.tasks.FinalizarCompra;
-import com.saucedemo.ui.SaucedemoUI;
 import io.cucumber.java.Before;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
@@ -20,7 +20,6 @@ import com.saucedemo.utils.JsonReader;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 import com.saucedemo.questions.MensajeConfirmacion;
-import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -80,20 +79,9 @@ public class StepDefinitions {
         actor.attemptsTo(Login.withCredentials(usuario, password));
     }
 
-    @And("Agrego producto {string}")
-    public void agregoProducto(String producto) {
-        Target target;
-        int index = datosCompra.getProductos().indexOf(producto);
-
-        if(index == 0){
-            target = SaucedemoUI.BTN_ADD_PRODUCT_1;
-            theActorInTheSpotlight().attemptsTo(new AgregarProducto(target));
-        }
-
-        if(index == 1){
-            target = SaucedemoUI.BTN_ADD_PRODUCT_2;
-            theActorInTheSpotlight().attemptsTo(new AgregarProducto(target));
-        }
+    @When("Agrego producto {string} al carrito")
+    public void AgregoProducto(String p) {
+        theActorInTheSpotlight().attemptsTo(new AgregarProducto(p));
     }
 
     @And("Visualizo mi carrito")

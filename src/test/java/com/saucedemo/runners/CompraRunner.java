@@ -10,5 +10,6 @@ import org.junit.runner.RunWith;
         glue = "com.saucedemo.stepdefinitions",
         tags = "@CompraExitosa"
 )
+
 public class CompraRunner {
 }
